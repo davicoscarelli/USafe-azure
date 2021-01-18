@@ -11,8 +11,6 @@ class EchoBot extends ActivityHandler {
 
             const replyText = `Echo aa: ${ context.activity.text }`;
 
-
-            
             await context.sendActivity(MessageFactory.text(replyText, replyText));
             await next();
         });
