@@ -9,9 +9,13 @@ class EchoBot extends ActivityHandler {
         // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
         this.onMessage(async (context, next) => {
 
-            const replyText = `Echo aa: ${ context.activity.text }`;
+            //const replyText = `Echo aa: ${ context.activity.text }`;
 
-            await context.sendActivity(MessageFactory.text(replyText, replyText));
+            if (context.activity.text === 'ralado'){
+                await context.sendActivity(MessageFactory.text('passa metiolate', 'passa metiolate'));
+            }
+
+            //await context.sendActivity(MessageFactory.text(replyText, replyText));
             await next();
         });
 
