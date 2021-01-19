@@ -1,0 +1,22 @@
+{
+    "c0": "A vítima está com dificuldade para respirar?",
+    "c00": "A vítima tem mais de 8 anos de idade?",
+    "c01": "A vítima está consciente?",
+    "c010": "A vítima tem mais de 8 anos de idade??",
+    "c011": "A vítima tem mais de 8 anos de idade??",
+    "c001": "ANSWER1",
+    "c000": "ANSWER2",
+    "c0100": "ANSWER6",
+    "c0101": "ANSWER5",
+    "c0110": "ANSWER2",
+    "c0111": "A vítima é Grávida/Obesa?",
+    "c01110": "ANSWER3",
+    "c01111": "ANSWER4",
+    "c1": "Você está com dificuldade para respirar?",
+    "c110": "Você está sozinho(a)?",
+    "c111": "ANSWER3.2",
+    "c101": "ANSWER1",
+    "c100": "ANSWER2+",
+    "c1100": "ANSWER2+",
+    "c1101": "CALL 911"
+}
