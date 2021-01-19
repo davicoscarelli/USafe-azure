@@ -6,15 +6,18 @@ const { ActivityHandler, MessageFactory } = require('botbuilder');
 class EchoBot extends ActivityHandler {
     constructor() {
         super();
-        let i = 0
+        let messages = []
+
         // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
         this.onMessage(async (context, next) => {
 
+
             //const replyText = `Echo aa: ${ context.activity.text }`;
+            messages.push(context.activity.text)
 
             if (context.activity.text === 'ralado'){
-                i += 1
-                await context.sendActivity(MessageFactory.text(`passa ${this.i}`, 'passa metiolate'));
+                
+                await context.sendActivity(MessageFactory.text(messages, 'passa metiolate'));
             }
 
             //await context.sendActivity(MessageFactory.text(replyText, replyText));
