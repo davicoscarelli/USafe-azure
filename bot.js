@@ -37,9 +37,10 @@ class EchoBot extends ActivityHandler {
                 // }
 
             const input = JSON.parse(context.activity.text)
+            let text = 'choking.c0'
 
             if (input[0] === 0){
-                await context.sendActivity(MessageFactory.text('choking.c0'));
+                await context.sendActivity(MessageFactory.text(text, text));
             }
 
             //await context.sendActivity(MessageFactory.text(replyText, replyText));
