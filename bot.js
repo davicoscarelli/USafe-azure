@@ -13,7 +13,7 @@ class EchoBot extends ActivityHandler {
             let text = ''
 
             if (input[0] == 0){
-                    if (input === [0,0]) { text = "A vítima está com dificuldade para respirar?"}
+                    if (input === [0,0]) await context.sendActivity(MessageFactory.text( "A vítima está com dificuldade para respirar?",  "A vítima está com dificuldade para respirar?"));
                     else if (input == [0,0,0]) {text = "A vítima tem mais de 8 anos de idade?"}
                     else if (input == [0,0,1]) {text = "A vítima está consciente?"}
                     else if (input == [0,0,1,0]) {text = "A vítima tem mais de 8 anos de idade??"}
@@ -41,7 +41,7 @@ class EchoBot extends ActivityHandler {
 
             
             
-            await context.sendActivity(MessageFactory.text(text, text));
+            
             
 
             //await context.sendActivity(MessageFactory.text(replyText, replyText));
