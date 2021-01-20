@@ -1,6 +1,6 @@
 
 const { ActivityHandler, MessageFactory } = require('botbuilder');
-import choking from './messages/choking.json'
+// import choking from './messages/choking.json'
 
 class USafe extends ActivityHandler {
     constructor() {
@@ -8,10 +8,10 @@ class USafe extends ActivityHandler {
         this.onMessage(async (context, next) => {
 
             
-            let input = JSON.parse(context.activity.text)
+            // let input = JSON.parse(context.activity.text)
             // let text = ''
 
-            if (input === [0,0]) text = "choking.c0"
+            if (context.activity.text === '[0,0]') text = "choking.c0"
 
             // if (input[0] === 0){
             //     if (input === [0,0]) text = choking.c0
@@ -46,17 +46,17 @@ class USafe extends ActivityHandler {
         });
 
 
-        this.onMembersAdded(async (context, next) => {
-            const membersAdded = context.activity.membersAdded;
-            // const welcomeText = 'Olá, como posso te ajudar?';
-            // for (let cnt = 0; cnt < membersAdded.length; ++cnt) {
-            //     if (membersAdded[cnt].id !== context.activity.recipient.id) {
-            //         await context.sendActivity(MessageFactory.text(welcomeText, welcomeText));
-            //     }
-            // }
-            // By calling next() you ensure that the next BotHandler is run.
-            await next();
-        });
+        // this.onMembersAdded(async (context, next) => {
+        //     // const membersAdded = context.activity.membersAdded;
+        //     // const welcomeText = 'Olá, como posso te ajudar?';
+        //     // for (let cnt = 0; cnt < membersAdded.length; ++cnt) {
+        //     //     if (membersAdded[cnt].id !== context.activity.recipient.id) {
+        //     //         await context.sendActivity(MessageFactory.text(welcomeText, welcomeText));
+        //     //     }
+        //     // }
+        //     // By calling next() you ensure that the next BotHandler is run.
+        //     await next();
+        // });
     }
 }
 
