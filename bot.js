@@ -36,7 +36,7 @@ class EchoBot extends ActivityHandler {
                 //     text = 'other.1'
                 // }
 
-            if (context.activity.text === '[0,0]'){
+            if (JSON.parse(context.activity.text) === [0,0]){
                 await context.sendActivity(MessageFactory.text('choking.c0', 'choking.c0'));
             }
 
